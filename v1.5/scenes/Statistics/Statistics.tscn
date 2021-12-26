@@ -1,0 +1,292 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Statistics/DataPoint.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fonts/DroidSans.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/Statistics/Statistics.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 14
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Statistics" type="Node2D"]
+script = ExtResource( 3 )
+DataPoint = ExtResource( 1 )
+
+[node name="table" type="Node2D" parent="."]
+
+[node name="background" type="ColorRect" parent="table"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.156863, 0.156863, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scale" type="Node2D" parent="table"]
+
+[node name="ms" type="RichTextLabel" parent="table/scale"]
+margin_top = 1024.0
+margin_right = 40.0
+margin_bottom = 1048.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]ms"
+text = "ms"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_0" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 1016 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_0"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]0"
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_1" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 916 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_1"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]100"
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_2" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 816 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_2"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]200"
+text = "200"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_3" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 716 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_3"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]300"
+text = "300"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_4" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 616 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_4"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]400"
+text = "400"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_5" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 516 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_5"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]500"
+text = "500"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_6" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 416 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_6"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]600"
+text = "600"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_7" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 316 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_7"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]700"
+text = "700"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_8" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 216 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_8"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]800"
+text = "800"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D_9" type="Line2D" parent="table/scale"]
+position = Vector2( 24, 116 )
+points = PoolVector2Array( 0, 0, 1920, 0 )
+width = 2.0
+default_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="number" type="RichTextLabel" parent="table/scale/Line2D_9"]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]900"
+text = "900"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="letter_points" type="Node2D" parent="."]
+position = Vector2( 192, 1080 )
+
+[node name="special_points" type="Node2D" parent="."]
+visible = false
+position = Vector2( 544, 1080 )
+
+[node name="buttons" type="Node2D" parent="."]
+position = Vector2( 104, -1000 )
+
+[node name="back" type="Button" parent="buttons"]
+margin_left = -80.0
+margin_top = 1024.0
+margin_right = -16.0
+margin_bottom = 1064.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="letters" type="Button" parent="buttons"]
+margin_top = 1024.0
+margin_right = 128.0
+margin_bottom = 1064.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+text = "normal letters"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="special" type="Button" parent="buttons"]
+margin_left = 144.0
+margin_top = 1024.0
+margin_right = 272.0
+margin_bottom = 1064.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+text = "special characters"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="buttons/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="buttons/letters" to="." method="_on_letters_pressed"]
+[connection signal="pressed" from="buttons/special" to="." method="_on_special_pressed"]

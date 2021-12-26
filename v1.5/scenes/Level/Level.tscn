@@ -1,0 +1,110 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/Level/Level.gd" type="Script" id=1]
+[ext_resource path="res://scenes/WordGenerator/WordGenerator.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/WordEnemy/WordEnemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/background/1872.png" type="Texture" id=4]
+[ext_resource path="res://sprites/background/1835.png" type="Texture" id=5]
+[ext_resource path="res://scenes/Ninja/Ninja.tscn" type="PackedScene" id=9]
+[ext_resource path="res://fonts/BradBunR.ttf" type="DynamicFontData" id=12]
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+outline_size = 4
+outline_color = Color( 0.396078, 0, 1, 1 )
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+content_margin_top = 9.0
+
+[node name="Level" type="Node2D"]
+position = Vector2( 0, 2 )
+script = ExtResource( 1 )
+WordEnemy = ExtResource( 3 )
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="1835" type="Sprite" parent="background"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="1872" type="Sprite" parent="background"]
+visible = false
+texture = ExtResource( 4 )
+centered = false
+
+[node name="word_enemies" type="Node2D" parent="."]
+position = Vector2( 2176, 776 )
+
+[node name="tools" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="tools"]
+wait_time = 3.0
+
+[node name="nina_position" type="Position2D" parent="tools"]
+position = Vector2( 128, 787 )
+
+[node name="WordGenerator" parent="tools" instance=ExtResource( 2 )]
+
+[node name="hud" type="Node2D" parent="."]
+
+[node name="enemies" type="RichTextLabel" parent="hud"]
+margin_left = 56.0
+margin_top = 998.0
+margin_right = 272.0
+margin_bottom = 1070.0
+custom_colors/default_color = Color( 0.941176, 0.941176, 1, 1 )
+custom_fonts/normal_font = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[center]Enemies:"
+text = "Enemies:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="enemy_value" type="RichTextLabel" parent="hud"]
+margin_left = 256.0
+margin_top = 998.0
+margin_right = 384.0
+margin_bottom = 1070.0
+custom_colors/default_color = Color( 0.941176, 0.941176, 1, 1 )
+custom_fonts/normal_font = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cpm" type="RichTextLabel" parent="hud"]
+margin_left = 512.0
+margin_top = 998.0
+margin_right = 640.0
+margin_bottom = 1070.0
+custom_colors/default_color = Color( 0.941176, 0.941176, 1, 1 )
+custom_fonts/normal_font = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[center]CPM:"
+text = "CPM:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cpm_value" type="RichTextLabel" parent="hud"]
+margin_left = 640.0
+margin_top = 998.0
+margin_right = 768.0
+margin_bottom = 1070.0
+custom_colors/default_color = Color( 0.941176, 0.941176, 1, 1 )
+custom_fonts/normal_font = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ninja" parent="." instance=ExtResource( 9 )]
+position = Vector2( 128, 787 )
+
+[connection signal="timeout" from="tools/Timer" to="." method="_on_Timer_timeout"]

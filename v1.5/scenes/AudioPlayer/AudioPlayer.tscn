@@ -1,0 +1,51 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://audio/391286__igor1998__ninja.wav" type="AudioStream" id=1]
+[ext_resource path="res://audio/391286__igor1998__ninja_reverse.wav" type="AudioStream" id=2]
+[ext_resource path="res://audio/stroke_2.wav" type="AudioStream" id=3]
+[ext_resource path="res://audio/stroke_3.wav" type="AudioStream" id=4]
+[ext_resource path="res://audio/stroke_1.wav" type="AudioStream" id=5]
+[ext_resource path="res://audio/wrong_keystroke.wav" type="AudioStream" id=6]
+[ext_resource path="res://audio/435413__v-ktor__explosion12.wav" type="AudioStream" id=7]
+[ext_resource path="res://audio/35213__abyssmal__slashkut.wav" type="AudioStream" id=8]
+[ext_resource path="res://scenes/AudioPlayer/AudioPlayer.gd" type="Script" id=9]
+[ext_resource path="res://audio/dark-souls-_you-died_-sound-effect-from-youtube.wav" type="AudioStream" id=10]
+[ext_resource path="res://audio/Fury Road By HeatleyBros (Loop Version).ogg" type="AudioStream" id=11]
+
+[node name="AudioPlayer" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="strokes" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="strokes"]
+stream = ExtResource( 5 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="strokes"]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="strokes"]
+stream = ExtResource( 4 )
+
+[node name="die_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="hit_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="explosion_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="wrong_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = 9.0
+
+[node name="cut_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="dark_souls_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="song_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -9.0
+autoplay = true

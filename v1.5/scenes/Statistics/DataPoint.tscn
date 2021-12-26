@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Statistics/DataPoint.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://fonts/DroidSans.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 28
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://fonts/DroidSans.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 24
+outline_size = 2
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 11 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+content_margin_top = 2.0
+bg_color = Color( 0.313726, 0.313726, 0.313726, 0.313726 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="DataPoint" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="letter" type="RichTextLabel" parent="."]
+margin_left = -24.0
+margin_top = -48.0
+margin_right = 24.0
+custom_colors/default_color = Color( 0.941176, 0.941176, 1, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[center]a"
+text = "a"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, -64, 0, -1080 )
+width = 6.0
+default_color = Color( 0, 0.721569, 0.72549, 0.85098 )
+
+[node name="time" type="RichTextLabel" parent="."]
+margin_left = -49.3308
+margin_top = -1057.33
+margin_right = 30.6692
+margin_bottom = -1025.33
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 33.3306, 0 )
+custom_colors/default_color = Color( 0.941176, 0.941176, 1, 1 )
+custom_fonts/normal_font = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+bbcode_enabled = true
+bbcode_text = "[center]"
+__meta__ = {
+"_edit_use_anchors_": false
+}

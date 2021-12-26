@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dark-souls-_you-died_-sound-effect-from-youtube.wav-9839e6152388f64a0f7fbfcfbd93b982.sample"
+
+[deps]
+
+source_file="res://audio/dark-souls-_you-died_-sound-effect-from-youtube.wav"
+dest_files=[ "res://.import/dark-souls-_you-died_-sound-effect-from-youtube.wav-9839e6152388f64a0f7fbfcfbd93b982.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
